@@ -12,8 +12,12 @@
     <style>
         .image-thumbnail {
             height: 200px;
+            object-fit: cover;
 
         }
+
+        #viewButton:hover {color: white;}
+
     </style>
 
 </head>
@@ -32,6 +36,10 @@
                       <li class="list-group-item">Cras justo odio</li>
                       <li class="list-group-item">Dapibus ac facilisis in</li>
                       <li class="list-group-item">Vestibulum at eros</li>
+
+                      <li class="list-group-item">
+                      <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a></li>
+                      
                     </ul>
                 </div>  
             </div>
@@ -43,11 +51,11 @@
                     
                     <div class="col-md-4">
                         <div class="card">
-                            <img class="image-thumbnail" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg" alt="Card image cap">
+                            <img class="image-thumbnail" src="https://images.unsplash.com/photo-1615789591457-74a63395c990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Card image cap">
                             <div class="card-body">
                               <small>Category: Pets</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1">View</a>
+                            <a href="{% url 'photo' 5 %}" id="viewButton" class="btn btn-outline-dark btn-sm m-1">View</a>
                           </div>
                     </div>
 
@@ -57,7 +65,7 @@
                             <div class="card-body">
                               <small>Category: Pets</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1">View</a>
+                            <a href="{% url 'photo' 5 %}" id="viewButton" class="btn btn-outline-dark btn-sm m-1">View</a>
                           </div>
                     </div>
 
@@ -67,17 +75,17 @@
                             <div class="card-body">
                               <small>Category: Pets</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1">View</a>
+                            <a href="{% url 'photo' 5 %}" id="viewButton" class="btn btn-outline-dark btn-sm m-1">View</a>
                           </div>
                     </div>
 
                     <div class="col-md-4">
-                        <div class="card my-4">
+                        <div class="card my-2">
                             <img class="image-thumbnail" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg" alt="Card image cap">
                             <div class="card-body">
                               <small>Category: Pets</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1">View</a>
+                            <a href="{% url 'photo' 5 %}" id="viewButton" class="btn btn-outline-dark btn-sm m-1">View</a>
                           </div>
                     </div>
 

@@ -19,9 +19,9 @@
                 <a href="{% url 'gallery' %}" class="btn btn-dark my-3">Go Back</a>
                 <div style="height: 90vh;">
                     
-                    <img style="max-width: 100%; max-height: 100%;" src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg">        
+                    <img style="max-width: 100%; max-height: 100%;" src="{{photo.image.url}}">        
                     
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+                    <p>{{photo.description}}</p>
                 
                 </div>
             </div>

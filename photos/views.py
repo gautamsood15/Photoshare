@@ -13,6 +13,12 @@ def gallery(request):
 
 def viewPhoto(request, pk):
     photo = Photo.objects.get(id=pk)
+    
+    if request.method == 'POST':
+        Photo.objects.filter(id=pk).delete()
+        return redirect('gallery')
+        
+
     return render(request, "photos/photo.html", {'photo': photo})
 
 def addPhoto(request):

@@ -48,9 +48,25 @@ def addPhoto(request):
     return render(request, "photos/add.html", context)
 
 
-def editPhoto(request):
+def editPhoto(request, pk):
 
-    context = {}
+    photo = Photo.objects.get(id=pk)
+    categories = Category.objects.all()
 
+    
 
+    if request.method == 'POST':
+        data = request.POST
+        print(data)
+
+        category = Category.objects.get(name=data['category'])
+
+        photo.category = category
+        photo.description = data['description']
+        photo.save()
+
+         
+        return redirect('photo', pk=pk)
+
+    context = {'photo': photo, 'categories': categories}
     return render(request, "photos/edit.html", context)

@@ -5,8 +5,18 @@ from .models import Category, Photo
 
 
 def gallery(request):
+    category = request.GET.get('category')
+    if category == None:
+        photos = Photo.objects.all()
+    else:
+        photos = Photo.objects.filter(category__name__contains=category)
+
+
+
+
+
     categories = Category.objects.all()
-    photos = Photo.objects.all()
+    
 
     context = {'categories': categories, 'photos': photos}
     return render(request, "photos/gallery.html", context)

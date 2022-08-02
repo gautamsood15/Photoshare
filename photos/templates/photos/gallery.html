@@ -16,7 +16,15 @@
 
         }
 
-        #viewButton:hover {color: white;}
+        /* #viewButton:hover {color: white;} */
+
+        .list-group-item a {
+          text-decoration: none;
+          color: rgb(62, 59, 59);
+
+        }
+
+
 
     </style>
 
@@ -45,7 +53,7 @@
 
 
                       <li class="list-group-item">
-                      <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a></li>
+                      <a href="{% url 'add' %}" style="color:white;" class="btn btn-dark btn-block btn-sm m-1">Add Photo</a></li>
                       
                     </ul>
                 </div>  

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
 
     'photos.apps.PhotosConfig',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +129,15 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+AWS_QUERYSTRING_AUTH = False
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_ACCESS_KEY_ID = 'AKIA2RHCCXZ3Q2UQLJ4W'
+AWS_SECRET_ACCESS_KEY = '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'
+
+AWS_STORAGE_BUCKET_NAME = 'photoshare22'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
